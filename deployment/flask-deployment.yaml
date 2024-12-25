@@ -21,9 +21,9 @@ spec:
                 configMapKeyRef:
                   name: flask-app-config
                   key: WELCOME_MSG
+            - name: REDIS_HOST
+              value: redis  # The hostname of the Redis service
+            - name: REDIS_PORT
+              value: "6379"  # The port exposed by the Redis service
           ports:
             - containerPort: 5000
-        - name: redis
-          image: redis:latest
-          ports:
-            - containerPort: 6379
