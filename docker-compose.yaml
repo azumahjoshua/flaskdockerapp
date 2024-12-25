@@ -10,6 +10,8 @@ services:
       - .:/app
     environment:
       FLASK_ENV: development
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
 
   redis:
     image: "redis:latest"
